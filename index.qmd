@@ -1,0 +1,422 @@
+---
+title: "Do they know...where they're going to?"
+subtitle: "Sharing & analyzing data from wearable sensors"
+author: "Rick O. Gilmore"
+csl: include/bib/apa.csl
+bibliography: include/bib/refs.bib
+css: include/css/styles.css
+format: 
+  revealjs:
+    slide-number: true
+    footer: "Opening the doors"
+    citations-hover: true
+    footnotes-hover: true
+    logo: "include/img/lab-logo.png"
+    link-external-icon: true
+---
+
+# Preliminaries
+
+## About me
+
+- B.A., Cognitive Science, Brown University
+- M.S. & Ph.D., Psychology (Cognitive Neuroscience), Carnegie Mellon University
+- Human brain development, perception & action, computational modeling, machine vision, big data, open science
+
+---
+
+- Founding Director of Human Imaging, Penn State Social, Life & Engineering Sciences Imaging Center ([SLEIC](https://www.imaging.psu.edu))
+- Co-Founder/Co-Director of [Databrary.org](https://databrary.org) data library
+- [gilmore-lab.github.io](https://gilmore-lab.github.io)
+- Co-organizer & faculty R Bootcamp ([17](https://psu-psychology.github.io/r-bootcamp/), [18](https://psu-psychology.github.io/r-bootcamp-2018/), [19](https://psu-psychology.github.io/r-bootcamp-2019/)), Open Science Bootcamp [2023](https://penn-state-open-science.github.io/bootcamp-2023/)
+
+---
+
+- clawhammer banjo player, actor, cyclist, backpacker, poet, [ham (W3TM)](https://w3tm.github.io/shack)
+- Judge of Elections, Precinct 26 • State College East 3
+- native Coloradoan, husband, dad, grandpa
+
+---
+
+```{r fig-qr-code}
+this_qr <- qrcode::qr_code("https://penn-state-open-science/soda-501-2024-spring/")
+plot(this_qr)
+```
+
+## Agenda
+
+- Wherefore perception?
+- Case study: The development of motion perception
+- Issues in openness, transparency, reproducibility
+
+# Wherefore perception?
+
+## Opening The Doors^[Thanks to Ennio Mingolla]
+
+:::: {.columns}
+::: {.column width="50%"}
+![William Blake, 1757-1827](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/William_Blake_by_Thomas_Phillips.jpg/220px-William_Blake_by_Thomas_Phillips.jpg)
+:::
+::: {.column width="50%"}
+>"*If the doors of perception were cleansed every thing would appear to man as it is, Infinite. For man has closed himself up, till he sees all things thro' narrow chinks of his cavern.*"
+:::
+::::
+
+---
+
+:::: {.columns}
+::: {.column width="50%"}
+![Huxley, 1954](https://upload.wikimedia.org/wikipedia/en/thumb/1/17/DoorsofPerception.jpg/220px-DoorsofPerception.jpg)
+:::
+::: {.column width="50%"}
+![Jim Morrison, "The Doors", 1943-1971](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Jim_Morrison_1969.JPG/220px-Jim_Morrison_1969.JPG)
+:::
+::::
+
+---
+
+## What must animals perceive?
+
+## What must animals do?
+
+## Perception inextricably linked to action
+
+- Requires actions by the perceiver
+- $A$ depends on $P$ (+ internal states--goals, memories)
+- $P$ depends on $A$ (+ internal states--goals, memories)
+
+## Ecological Psychology
+
+![James J. and Eleanor J. Gibson](https://www.oreilly.com/api/v2/epubs/9781449326531/files/httpatomoreillycomsourceoreillyimages2160395.png.jpg)
+
+## Behavioral priorities (evolutionary view)
+
+- Secure sustenance (food & drink)...
+- Avoid harm
+- (Maybe, just maybe...) reproduce
+
+## Behavioral primitives
+
+- Locomotion (wayfinding, steering, & balance)
+- Object interaction/manipulation
+- Communication (vocalizing & gesturing)
+
+## Perception informs...
+
+- Where things are; where they're moving
+- Who/what's out there
+- Where am I positioned/moving
+- What should I do next
+- Outside world and inside world
+
+## *Extero*ception ($E$)...
+
+- Geometry and motion of objects and surfaces
+- Surface properties (color, texture, rigidity)
+- Object properties
+  - animate/inanimate; familiar/un-; person/animal...; threat/not-, etc.
+
+## *Intero*ception ($I$)...
+
+- Current states (of body, and thoughts, emotions, plans)
+- Past states (a.k.a., memories)
+- $E+I = P$
+
+## Psychophysics
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](https://www.psywww.com/intropsych/ch04-senses/04stevenscurves.jpg)
+:::
+::: {.column width="50%"}
+- Maps perception (*psycho*) to *physic*al features
+- Among the earliest ([Weber](https://en.wikipedia.org/wiki/Ernst_Heinrich_Weber) & [Fechner](https://en.wikipedia.org/wiki/Gustav_Fechner)) methods in experimental psychology
+- Quantitative model of internal decision processes
+:::
+::::
+
+## Virtues of $\Psi$ *functions*
+
+![Change in visual acuity from <https://gilmore-lab.github.io/visual-acuity/>](https://gilmore-lab.github.io/visual-acuity/data_files/figure-html/fig-teller-acuity-across-age-1.png)
+---
+
+![[Figure 1 from @Qian2022-yp]](https://gilmore-lab.github.io/sex-differences-project/analysis/paper_figs/fig-01-boxplots-new.jpg)
+
+## Limitations of psychophysical methods
+
+- Costly to measure
+- Are thresholds consistent (within observers, across situations)?
+- Lab (control high, detail lower) 
+- vs. real world (control lower, detail high)
+
+# Case study: The development of motion perception
+
+## Optic flow
+
+- Visual motion generated by observer movement
+
+---
+
+{{< video https://www.shutterstock.com/shutterstock/videos/1068753407/preview/stock-footage-first-person-pov-of-person-snowboarding-fast-on-ski-slope-mountain.webm >}}
+
+<https://www.shutterstock.com/video/clip-1068753407-first-person-pov-snowboarding-fast-on-ski>
+
+---
+
+- Exteroceptive
+  - Layout of environment
+- Interoceptive
+  - Where am I moving
+
+---
+
+- Tight perception/action coupling
+- Self-motion -> optic flow pattern
+  - Forward/backward: radial flow
+  - Side to side/Up or down: lateral flow
+  - Somersault: rotational flow
+  
+---
+
+![Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Opticfloweg.png/2880px-Opticfloweg.png)
+
+## Can be studied in infants & children...
+
+<div class="center_fig">
+<video width="640" height="480" controls>
+  <source src="https://nyu.databrary.org/slot/9803/-/asset/11179/download?inline=true" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</div>
+
+<p style="text-align:center;">
+[@Gilmore2014-databrary]
+</p>
+
+---
+
+<div class="center_fig">
+<video width="640" height="480" controls>
+  <source src="https://nyu.databrary.org/slot/9825/-/asset/11637/download?inline=true" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</div>
+
+<p style="text-align:center;">
+[@Gilmore2014a-databrary]
+</p>
+
+---
+
+>- Using *psychophysics* [@Gilmore2004-ba; @Gilmore2003-hh; @Qian2021-eu]
+>- And *psychophysiology* [@Gilmore2016-lq; @Gilmore2007-yb; @Hou2009-iy]
+>- Development prolonged
+>- Brain activity immature
+>- What else affects developmental change?
+
+## A: Posture!
+
+![[@Kretch2014-ck]](https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/kretch-etal.png)
+
+## Simulating effects of postural change
+
+| Parameter | Crawling Infant | Walking Infant |
+|-----------|-----------------|----------------|
+| Eye height| 0.30 m          | 0.60 m         |
+| Locomotor speed | 0.33 m/s  | 0.61 m/s       |
+| Head tilt | 20 deg          | 9 deg          |
+
+---
+
+![[@Gilmore2015-oj]](https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/simulation-flow-patterns.png)
+
+---
+
+![[@Gilmore2015-oj]](https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/simulation-flow-direction-hist.png)
+
+---
+
+| Type of Locomotion | Ground Plane | Room | Side Wall | Two Walls |
+|--------------------|--------------|------|-----------|-----------|
+| Crawling           | 14.41        | 14.42| 14.43     |14.62      |
+| Walking            | 9.38         | 8.56 | 7.39      |9.18       |
+
+## But, what's the input? 
+
+- The *real* input?
+- And how to measure it?
+
+## A: Head-mounted sensors
+
+- Head-mounted eye trackers [@Kretch2015-hv; @Franchak2011-ku]
+- Head cameras [@Jayaraman-databrary]
+
+---
+
+![[Figure 1 from @Kretch2015-hv]](https://onlinelibrary.wiley.com/cms/asset/0867708c-7679-43ed-b59f-85f11ae4caff/desc12251-fig-0001-m.png)
+
+---
+
+<https://nyu.databrary.org/slot/7739/0,26634/asset/16747/download?inline=true>
+
+<https://nyu.databrary.org/slot/7739/0,26134/asset/16749/download?inline=true>
+
+---
+
+### Flow patterns
+
+<div class="center_fig">
+<video controls>
+  <source src="https://nyu.databrary.org/slot/11680/25500,50000/asset/41873/download?inline=true" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</div>
+
+### Speed distribution
+
+<div class="center_fig">
+<video controls>
+  <source src="https://nyu.databrary.org/slot/11680/51000,75500/asset/41875/download?inline=true" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</div>
+
+## Findings
+
+![[@Raudies2014-tg]](https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/optic-flow-locomotion.jpg)
+
+## [@Raudies2014-tg]
+
+>- Infant (passengers) experience faster visual speeds than mother
+>- Fast speeds common in infant visual experience
+>- Motion "priors" for infants ≠ mothers
+
+## Does culture (India vs. Indiana) influence?
+
+![[@Jayaraman-databrary]](include/img/jayaraman-databrary.png)
+
+---
+
+![[Figure 3 from @Gilmore2015-oj]](include/img/gilmore-etal-2015-fig03.png)
+
+---
+
+![[Figure 4 from @Gilmore2015-oj]](include/img/gilmore-etal-2015-fig04.png)
+
+## A: Not much!
+
+# Issues in openness, transparency, reproducibility
+
+## Sharing identifiable data, especially video
+
+- Costly to anonymize
+- Alteration reduces reuse potential
+- File sizes large
+- Long-term storage $3-5K/TB
+
+---
+
+- Adolph, Franchak, Kretch, Jayaraman willing to share with *me*
+- What about others?
+
+## Databrary
+
+- Restricted access data library
+  - [Access agreement](https://databrary.org/about/agreement/agreement.html)
+- Based at NYU, global user community
+- Consistent [sharing permission levels](https://databrary.org/support/irb/release-levels.html)
+- Broad consent
+- Encourages open sharing
+
+## {background-iframe="https://databrary.org"}
+
+## Databrary
+
+- Free (but not for long)
+- Share unaltered video + other data
+- Open, unrestricted research uses (broad consent)
+- All data & metadata accessible via API
+
+## {background-iframe="https://databrary.github.io/databraryr/"}
+
+---
+
+```{r}
+#| echo: TRUE
+databraryr::get_db_stats()
+```
+
+---
+
+```{r}
+#| echo: TRUE
+databraryr::list_volume_assets(vol_id = 1)
+```
+
+---
+
+```{r}
+#| echo: TRUE
+databraryr::download_session_csv() |> 
+  readr::read_csv(show_col_types = FALSE)
+```
+
+## Play & Learning Across a Year (PLAY) Project
+
+- What does behavior look like in natural home environments?
+- [Parent site](https://www.anhourinthelife.org)
+- [Public researcher site](https://play-project.org)
+- Openly shared protocol
+
+## {background-video="https://www.anhourinthelife.org/img/PLAY-parents-noaudio.mp4"}
+
+## Lessons learned
+
+- Openness -> detailed [quality assurance](https://www.play-project.org/quality)
+- Openness -> (Hyper)-active data curation [@Soska2021-mh]
+- Openness -> [continuous integration](https://play-behaviorome.github.io/KoBoToolbox/)
+
+---
+
+![https://play-behaviorome.github.io/KoBoToolbox/](https://play-behaviorome.github.io/KoBoToolbox/include/img/fig-walk-mos-kea-crawl-mos-1.png)
+---
+
+![https://play-behaviorome.github.io/KoBoToolbox/](https://play-behaviorome.github.io/KoBoToolbox/include/img/fig-illness-allergies-1.png)
+---
+
+![](https://play-behaviorome.github.io/KoBoToolbox/include/img/18-eng-wordcloud-1.png)
+
+# Take-homes
+
+## Development of optic flow perception
+
+- Lab + real-world data
+  - Confirmations & surprises
+- Data sharing *essential*
+
+## Sharing identifiable data
+
+- Possible
+- Easier than many think, but still hard
+- Databrary model: Restricted access + consistent permission
+- Plan to share from the outset
+- Ask permission
+- Script everything you can
+
+## {background-iframe="https://penn-state-open-science.github.io/data-mgmt-2024/"}
+
+# Materials
+
+---
+
+The code and materials used to generate the slides may be found at <https://github.com/penn-state-open-science/soda-501-2024-spring/>.
+
+```{r}
+#| label: "fig-qr-code-1"
+#| fig-cap: "Talk slides (HTML)"
+this_qr <- qrcode::qr_code("https://penn-state-open-science/soda-501-2024-spring/")
+plot(this_qr)
+```
+
+## References
