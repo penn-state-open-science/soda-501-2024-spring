@@ -8,7 +8,7 @@ css: include/css/styles.css
 format: 
   revealjs:
     slide-number: true
-    footer: "Opening the doors"
+    footer: "SoDA 501: Sharing identifiable data"
     citations-hover: true
     footnotes-hover: true
     logo: "include/img/lab-logo.png"
@@ -379,13 +379,13 @@ databraryr::download_session_csv() |>
 
 ---
 
-![https://play-behaviorome.github.io/KoBoToolbox/](https://play-behaviorome.github.io/KoBoToolbox/include/img/fig-walk-mos-kea-crawl-mos-1.png)
+![Parent-reported age of child crawling onset vs. walking onset. Source: <https://play-behaviorome.github.io/KoBoToolbox/>](https://play-behaviorome.github.io/KoBoToolbox/include/img/fig-walk-mos-kea-crawl-mos-1.png)
 ---
 
-![https://play-behaviorome.github.io/KoBoToolbox/](https://play-behaviorome.github.io/KoBoToolbox/include/img/fig-illness-allergies-1.png)
+![Parent reports of child illnesses. Source: <https://play-behaviorome.github.io/KoBoToolbox/>](https://play-behaviorome.github.io/KoBoToolbox/include/img/fig-illness-allergies-1.png)
 ---
 
-![](https://play-behaviorome.github.io/KoBoToolbox/include/img/18-eng-wordcloud-1.png)
+![Most common words parents report 18-mo-olds know or say. Source: <https://play-behaviorome.github.io/KoBoToolbox/>](https://play-behaviorome.github.io/KoBoToolbox/include/img/18-eng-wordcloud-1.png)
 
 # Take-homes
 
@@ -400,11 +400,33 @@ databraryr::download_session_csv() |>
 - Possible
 - Easier than many think, but still hard
 - Databrary model: Restricted access + consistent permission
-- Plan to share from the outset
-- Ask permission
-- Script everything you can
 
+## Plan your work; work your plan
+
+- Plan to share from the outset
+- Ask permission to share
+- Script everything you can
+  - Be kind to your future (forgetful) self
+- DRY WIT
+  - **D**on't **r**epeat **y**ourself; **w**rite **i**t **d**own.
+  
 ## {background-iframe="https://penn-state-open-science.github.io/data-mgmt-2024/"}
+
+---
+
+### Workshop registration
+
+```{r}
+#| fig-cap: "Data management workshop"
+this_qr <- qrcode::qr_code("https://penn-state-open-science.github.io/data-mgmt-2024/")
+plot(this_qr)
+```
+
+## Data scientist wanted
+
+- PLAY Project
+- Databrary (especially *databraryr* and Python version)
+- Part-time/hourly
 
 # Materials
 
