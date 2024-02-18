@@ -9,8 +9,11 @@
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="index_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+<link href="index_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script src="index_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="index_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="index_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Rick O. Gilmore">
   <title>Do they know…where they’re going to?</title>
@@ -33,7 +36,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -100,6 +103,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -243,7 +247,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -457,7 +462,7 @@ Rick O. Gilmore
 <section class="slide level2">
 
 
-<img data-src="index_files/figure-revealjs/fig-qr-code-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;1: <strong>?(caption)</strong></p></section>
+<img data-src="index_files/figure-revealjs/slides-qr-code-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">HTML slides</p></section>
 <section id="agenda" class="slide level2">
 <h2>Agenda</h2>
 <ul>
@@ -516,11 +521,6 @@ Rick O. Gilmore
 </section>
 <section id="perception-inextricably-linked-to-action" class="slide level2">
 <h2>Perception inextricably linked to action</h2>
-<ul>
-<li>Requires actions by the perceiver</li>
-<li><span class="math inline">\(A\)</span> depends on <span class="math inline">\(P\)</span> (+ internal states–goals, memories)</li>
-<li><span class="math inline">\(P\)</span> depends on <span class="math inline">\(A\)</span> (+ internal states–goals, memories)</li>
-</ul>
 </section>
 <section id="ecological-psychology" class="slide level2">
 <h2>Ecological Psychology</h2>
@@ -549,26 +549,6 @@ Rick O. Gilmore
 <li>Who/what’s out there</li>
 <li>Where am I positioned/moving</li>
 <li>What should I do next</li>
-<li>Outside world and inside world</li>
-</ul>
-</section>
-<section id="exteroception-e" class="slide level2">
-<h2><em>Extero</em>ception (<span class="math inline">\(E\)</span>)…</h2>
-<ul>
-<li>Geometry and motion of objects and surfaces</li>
-<li>Surface properties (color, texture, rigidity)</li>
-<li>Object properties
-<ul>
-<li>animate/inanimate; familiar/un-; person/animal…; threat/not-, etc.</li>
-</ul></li>
-</ul>
-</section>
-<section id="interoception-i" class="slide level2">
-<h2><em>Intero</em>ception (<span class="math inline">\(I\)</span>)…</h2>
-<ul>
-<li>Current states (of body, and thoughts, emotions, plans)</li>
-<li>Past states (a.k.a., memories)</li>
-<li><span class="math inline">\(E+I = P\)</span></li>
 </ul>
 </section>
 <section id="psychophysics" class="slide level2">
@@ -621,21 +601,7 @@ Rick O. Gilmore
 <section class="slide level2">
 
 <ul>
-<li>Exteroceptive
-<ul>
-<li>Layout of environment</li>
-</ul></li>
-<li>Interoceptive
-<ul>
-<li>Where am I moving</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>Tight perception/action coupling</li>
-<li>Self-motion -&gt; optic flow pattern
+<li>Self-motion &lt;-&gt; optic flow pattern
 <ul>
 <li>Forward/backward: radial flow</li>
 <li>Side to side/Up or down: lateral flow</li>
@@ -672,7 +638,9 @@ Your browser does not support the video tag. </video>
 <section class="slide level2">
 
 <ul>
-<li class="fragment">Using <em>psychophysics</em> <span class="citation" data-cites="Gilmore2004-ba Gilmore2003-hh Qian2021-eu">(<a href="#/references" role="doc-biblioref" onclick="">Gilmore, Baker, &amp; Grobman, 2004</a>; <a href="#/references" role="doc-biblioref" onclick="">Gilmore &amp; Rettke, 2003</a>; <a href="#/references" role="doc-biblioref" onclick="">Qian, Seisler, &amp; Gilmore, 2021</a>)</span></li>
+<li>Using <em>psychophysics</em> <span class="citation" data-cites="Gilmore2004-ba Gilmore2003-hh Qian2021-eu">(<a href="#/references" role="doc-biblioref" onclick="">Gilmore, Baker, &amp; Grobman, 2004</a>; <a href="#/references" role="doc-biblioref" onclick="">Gilmore &amp; Rettke, 2003</a>; <a href="#/references" role="doc-biblioref" onclick="">Qian, Seisler, &amp; Gilmore, 2021</a>)</span></li>
+</ul>
+<ul>
 <li class="fragment">And <em>psychophysiology</em> <span class="citation" data-cites="Gilmore2016-lq Gilmore2007-yb Hou2009-iy">(<a href="#/references" role="doc-biblioref" onclick="">Gilmore, Hou, Pettet, &amp; Norcia, 2007</a>; <a href="#/references" role="doc-biblioref" onclick="">Gilmore, Thomas, &amp; Fesi, 2016</a>; <a href="#/references" role="doc-biblioref" onclick="">Hou, Gilmore, Pettet, &amp; Norcia, 2009</a>)</span></li>
 <li class="fragment">Development prolonged</li>
 <li class="fragment">Brain activity immature</li>
@@ -682,7 +650,10 @@ Your browser does not support the video tag. </video>
 <section id="a-posture" class="slide level2">
 <h2>A: Posture!</h2>
 
-<img data-src="https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/kretch-etal.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="Kretch2014-ck">(<a href="#/references" role="doc-biblioref" onclick="">Kretch, Franchak, &amp; Adolph, 2014</a>)</span></p></section>
+<img data-src="https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/kretch-etal.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="Kretch2014-ck">(<a href="#/references" role="doc-biblioref" onclick="">Kretch, Franchak, &amp; Adolph, 2014</a>)</span></p><ul>
+<li class="fragment">Why? Geometry</li>
+</ul>
+</section>
 <section id="simulating-effects-of-postural-change" class="slide level2">
 <h2>Simulating effects of postural change</h2>
 <table>
@@ -749,6 +720,9 @@ Your browser does not support the video tag. </video>
 </tr>
 </tbody>
 </table>
+<ul>
+<li class="fragment">Environmental geometry doesn’t matter (much)</li>
+</ul>
 </section>
 <section id="but-whats-the-input" class="slide level2">
 <h2>But, what’s the input?</h2>
@@ -757,8 +731,8 @@ Your browser does not support the video tag. </video>
 <li>And how to measure it?</li>
 </ul>
 </section>
-<section id="a-head-mounted-sensors" class="slide level2">
-<h2>A: Head-mounted sensors</h2>
+<section id="a-head-mounted-cameras" class="slide level2">
+<h2>A: Head-mounted cameras</h2>
 <ul>
 <li>Head-mounted eye trackers <span class="citation" data-cites="Kretch2015-hv Franchak2011-ku">(<a href="#/references" role="doc-biblioref" onclick="">Franchak, Kretch, Soska, &amp; Adolph, 2011</a>; <a href="#/references" role="doc-biblioref" onclick="">Kretch &amp; Adolph, 2015</a>)</span></li>
 <li>Head cameras <span class="citation" data-cites="Jayaraman-databrary">(<a href="#/references" role="doc-biblioref" onclick="">Jayaraman &amp; Smith, 2014</a>)</span></li>
@@ -792,8 +766,9 @@ Your browser does not support the video tag. </video>
 <h2>Findings</h2>
 
 <img data-src="https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/optic-flow-locomotion.jpg" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="Raudies2014-tg">(<a href="#/references" role="doc-biblioref" onclick="">Raudies &amp; Gilmore, 2014</a>)</span></p></section>
-<section id="raudies2014-tg" class="slide level2">
-<h2><span class="citation" data-cites="Raudies2014-tg">(<a href="#/references" role="doc-biblioref" onclick="">Raudies &amp; Gilmore, 2014</a>)</span></h2>
+<section class="slide level2">
+
+<p><span class="citation" data-cites="Raudies2014-tg">(<a href="#/references" role="doc-biblioref" onclick="">Raudies &amp; Gilmore, 2014</a>)</span></p>
 <ul>
 <li class="fragment">Infant (passengers) experience faster visual speeds than mother</li>
 <li class="fragment">Fast speeds common in infant visual experience</li>
@@ -843,19 +818,32 @@ Your browser does not support the video tag. </video>
 <ul>
 <li><a href="https://databrary.org/about/agreement/agreement.html">Access agreement</a></li>
 </ul></li>
-<li>Based at NYU, global user community</li>
-<li>Consistent <a href="https://databrary.org/support/irb/release-levels.html">sharing permission levels</a></li>
-<li>Broad consent</li>
-<li>Encourages open sharing</li>
 </ul>
 </section>
 <section id="section" class="slide level2" data-background-iframe="https://databrary.org">
 <h2></h2>
 </section>
+<section class="slide level2">
+
+<ul>
+<li>Based at NYU, global user community</li>
+</ul>
+
+<img data-src="include/img/databrary-map-2024-02-18.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://databrary.org" class="uri">https://databrary.org</a></p></section>
+<section id="consistent-sharing-release-levels" class="slide level2">
+<h2>Consistent <a href="https://databrary.org/support/irb/release-levels.html">sharing release levels</a></h2>
+
+<img data-src="include/img/databrary-release-levels.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://databrary.org/support/irb/release-levels.html" class="uri">https://databrary.org/support/irb/release-levels.html</a></p></section>
+<section class="slide level2">
+
+<ul>
+<li>Encourages open sharing (data owner/depositor permission not required for reuse)</li>
+</ul>
+</section>
 <section id="databrary-1" class="slide level2">
 <h2>Databrary</h2>
 <ul>
-<li>Free (but not for long)</li>
+<li>Free (but moving to subscription model)</li>
 <li>Share unaltered video + other data</li>
 <li>Open, unrestricted research uses (broad consent)</li>
 <li>All data &amp; metadata accessible via API</li>
@@ -867,12 +855,12 @@ Your browser does not support the video tag. </video>
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>databraryr<span class="sc">::</span><span class="fu">get_db_stats</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>databraryr<span class="sc">::</span><span class="fu">get_db_stats</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 9
   date                investigators affiliates institutions datasets_total
   &lt;dttm&gt;                      &lt;int&gt;      &lt;int&gt;        &lt;int&gt;          &lt;int&gt;
-1 2024-02-15 08:47:46          1717        675          777           1653
+1 2024-02-18 08:07:27          1718        676          777           1653
 # ℹ 4 more variables: datasets_shared &lt;int&gt;, n_files &lt;int&gt;, hours &lt;dbl&gt;,
 #   TB &lt;dbl&gt;</code></pre>
 </div>
@@ -881,7 +869,7 @@ Your browser does not support the video tag. </video>
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>databraryr<span class="sc">::</span><span class="fu">list_volume_assets</span>(<span class="at">vol_id =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>databraryr<span class="sc">::</span><span class="fu">list_volume_assets</span>(<span class="at">vol_id =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    asset_id asset_format_id asset_duration
 1       9826            -800         335883
@@ -1405,8 +1393,8 @@ Your browser does not support the video tag. </video>
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>databraryr<span class="sc">::</span><span class="fu">download_session_csv</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a href="#cb5-2"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>databraryr<span class="sc">::</span><span class="fu">download_session_csv</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href=""></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 25 × 4
    `session-id` `session-name`                  `session-date` `session-release`
@@ -1425,11 +1413,11 @@ Your browser does not support the video tag. </video>
 </div>
 </div>
 </section>
-<section id="play-learning-across-a-year-play-project" class="slide level2">
-<h2>Play &amp; Learning Across a Year (PLAY) Project</h2>
+<section id="play-learning-across-a-year-play" class="slide level2">
+<h2>Play &amp; Learning Across a Year (PLAY)</h2>
 <ul>
 <li>What does behavior look like in natural home environments?</li>
-<li><a href="https://www.anhourinthelife.org">Parent site</a></li>
+<li><a href="https://www.anhourinthelife.org">Recruiting site</a> for parents</li>
 <li><a href="https://play-project.org">Public researcher site</a></li>
 <li>Openly shared protocol</li>
 </ul>
@@ -1441,7 +1429,35 @@ Your browser does not support the video tag. </video>
 <h2>Lessons learned</h2>
 <ul>
 <li>Openness -&gt; detailed <a href="https://www.play-project.org/quality">quality assurance</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="include/img/soska-etal-2021-fig03.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="[Figure 3 from @Soska2021-mh]"><img data-src="include/img/soska-etal-2021-fig03.jpg" alt="(Figure 3 from Soska et al., 2021)"></a></p>
+<figcaption><span class="citation" data-cites="Soska2021-mh">(Figure 3 from <a href="#/references" role="doc-biblioref" onclick="">Soska et al., 2021</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="lessons-learned-1" class="slide level2">
+<h2>Lessons learned</h2>
+<ul>
 <li>Openness -&gt; (Hyper)-active data curation <span class="citation" data-cites="Soska2021-mh">(<a href="#/references" role="doc-biblioref" onclick="">Soska et al., 2021</a>)</span></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="include/img/soska-etal-2021-fig01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="[Figure 1 from @Soska2021-mh]"><img data-src="include/img/soska-etal-2021-fig01.jpg" alt="(Figure 1 from Soska et al., 2021)"></a></p>
+<figcaption><span class="citation" data-cites="Soska2021-mh">(Figure 1 from <a href="#/references" role="doc-biblioref" onclick="">Soska et al., 2021</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="lessons-learned-2" class="slide level2">
+<h2>Lessons learned</h2>
+<ul>
 <li>Openness -&gt; <a href="https://play-behaviorome.github.io/KoBoToolbox/">continuous integration</a></li>
 </ul>
 </section>
@@ -1520,14 +1536,22 @@ Your browser does not support the video tag. </video>
 
 <p>The code and materials used to generate the slides may be found at <a href="https://github.com/penn-state-open-science/soda-501-2024-spring/" class="uri">https://github.com/penn-state-open-science/soda-501-2024-spring/</a>.</p>
 
-<img data-src="index_files/figure-revealjs/fig-qr-code-1-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;2: Talk slides (HTML)</p></section>
+<img data-src="index_files/figure-revealjs/fig-qr-code-1-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;1: Talk slides (HTML)
+</p></section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
-
-<img src="include/img/lab-logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<div class="quarto-auto-generated-content">
+<p><img src="include/img/lab-logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>SoDA 501: Sharing identifiable data</p>
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+</div>
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1"><span class="citation" data-cites="Soska2021-mh">(Figure 3 from <a href="#/references" role="doc-biblioref" onclick="">Soska et al., 2021</a>)</span></span>
+<span class="glightbox-desc lightbox-desc-2"><span class="citation" data-cites="Soska2021-mh">(Figure 1 from <a href="#/references" role="doc-biblioref" onclick="">Soska et al., 2021</a>)</span></span>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-Franchak2011-ku" class="csl-entry" role="listitem">
 Franchak, J. M., Kretch, K. S., Soska, K. C., &amp; Adolph, K. E. (2011). Head-mounted eye tracking: A new method to describe infant looking. <em>Child Development</em>, <em>82</em>(6), 1738–1750. <a href="https://doi.org/10.1111/j.1467-8624.2011.01670.x">https://doi.org/10.1111/j.1467-8624.2011.01670.x</a>
 </div>
@@ -1605,7 +1629,6 @@ Soska, K. C., Xu, M., Gonzalez, S. L., Herzberg, O., Tamis-LeMonda, C. S., Gilmo
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1904,10 +1927,24 @@ Soska, K. C., Xu, M., Gonzalez, S. L., Herzberg, O., Tamis-LeMonda, C. S., Gilmo
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+              // default icon
+              link.classList.add("external");
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1917,8 +1954,17 @@ Soska, K. C., Xu, M., Gonzalez, S. L., Herzberg, O., Tamis-LeMonda, C. S., Gilmo
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1972,23 +2018,34 @@ Soska, K. C., Xu, M., Gonzalez, S. L., Herzberg, O., Tamis-LeMonda, C. S., Gilmo
           });
         }
       }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-              // default icon
-              link.classList.add("external");
-          }
-        }
     });
     </script>
-    
+    <script>videojs(video_shortcode_videojs_video1);</script>
+    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom"});
+    window.onload = () => {
+      lightboxQuarto.on('slide_before_load', (data) => {
+        const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+        const href = trigger.getAttribute('href');
+        if (href !== null) {
+          const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+          if (imgEl !== null) {
+            const srcAttr = imgEl.getAttribute("src");
+            if (srcAttr && srcAttr.startsWith("data:")) {
+              slideConfig.href = srcAttr;
+            }
+          }
+        } 
+      });
+
+      lightboxQuarto.on('slide_after_load', (data) => {
+        const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(slideNode);
+        }
+      });
+
+    };
+              </script>
     
 
 </body></html>

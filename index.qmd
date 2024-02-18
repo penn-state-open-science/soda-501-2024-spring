@@ -39,6 +39,8 @@ format:
 ---
 
 ```{r fig-qr-code}
+#| label: slides-qr-code
+#| fig-cap: "HTML slides"
 this_qr <- qrcode::qr_code("https://penn-state-open-science/soda-501-2024-spring/")
 plot(this_qr)
 ```
@@ -81,10 +83,6 @@ plot(this_qr)
 
 ## Perception inextricably linked to action
 
-- Requires actions by the perceiver
-- $A$ depends on $P$ (+ internal states--goals, memories)
-- $P$ depends on $A$ (+ internal states--goals, memories)
-
 ## Ecological Psychology
 
 ![James J. and Eleanor J. Gibson](https://www.oreilly.com/api/v2/epubs/9781449326531/files/httpatomoreillycomsourceoreillyimages2160395.png.jpg)
@@ -107,20 +105,6 @@ plot(this_qr)
 - Who/what's out there
 - Where am I positioned/moving
 - What should I do next
-- Outside world and inside world
-
-## *Extero*ception ($E$)...
-
-- Geometry and motion of objects and surfaces
-- Surface properties (color, texture, rigidity)
-- Object properties
-  - animate/inanimate; familiar/un-; person/animal...; threat/not-, etc.
-
-## *Intero*ception ($I$)...
-
-- Current states (of body, and thoughts, emotions, plans)
-- Past states (a.k.a., memories)
-- $E+I = P$
 
 ## Psychophysics
 
@@ -164,15 +148,7 @@ plot(this_qr)
 
 ---
 
-- Exteroceptive
-  - Layout of environment
-- Interoceptive
-  - Where am I moving
-
----
-
-- Tight perception/action coupling
-- Self-motion -> optic flow pattern
+- Self-motion <-> optic flow pattern
   - Forward/backward: radial flow
   - Side to side/Up or down: lateral flow
   - Somersault: rotational flow
@@ -209,7 +185,8 @@ plot(this_qr)
 
 ---
 
->- Using *psychophysics* [@Gilmore2004-ba; @Gilmore2003-hh; @Qian2021-eu]
+- Using *psychophysics* [@Gilmore2004-ba; @Gilmore2003-hh; @Qian2021-eu]
+
 >- And *psychophysiology* [@Gilmore2016-lq; @Gilmore2007-yb; @Hou2009-iy]
 >- Development prolonged
 >- Brain activity immature
@@ -218,6 +195,8 @@ plot(this_qr)
 ## A: Posture!
 
 ![[@Kretch2014-ck]](https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/kretch-etal.png)
+
+>- Why? Geometry
 
 ## Simulating effects of postural change
 
@@ -242,12 +221,14 @@ plot(this_qr)
 | Crawling           | 14.41        | 14.42| 14.43     |14.62      |
 | Walking            | 9.38         | 8.56 | 7.39      |9.18       |
 
+>- Environmental geometry doesn't matter (much)
+
 ## But, what's the input? 
 
 - The *real* input?
 - And how to measure it?
 
-## A: Head-mounted sensors
+## A: Head-mounted cameras
 
 - Head-mounted eye trackers [@Kretch2015-hv; @Franchak2011-ku]
 - Head cameras [@Jayaraman-databrary]
@@ -286,7 +267,9 @@ plot(this_qr)
 
 ![[@Raudies2014-tg]](https://raw.githubusercontent.com/gilmore-lab/temple-2017-02-27/master/img/optic-flow-locomotion.jpg)
 
-## [@Raudies2014-tg]
+---
+
+[@Raudies2014-tg]
 
 >- Infant (passengers) experience faster visual speeds than mother
 >- Fast speeds common in infant visual experience
@@ -324,16 +307,26 @@ plot(this_qr)
 
 - Restricted access data library
   - [Access agreement](https://databrary.org/about/agreement/agreement.html)
-- Based at NYU, global user community
-- Consistent [sharing permission levels](https://databrary.org/support/irb/release-levels.html)
-- Broad consent
-- Encourages open sharing
-
+  
 ## {background-iframe="https://databrary.org"}
+
+---
+
+- Based at NYU, global user community
+
+![<https://databrary.org>](include/img/databrary-map-2024-02-18.png)
+
+## Consistent [sharing release levels](https://databrary.org/support/irb/release-levels.html)
+
+![<https://databrary.org/support/irb/release-levels.html>](include/img/databrary-release-levels.png)
+
+---
+
+- Encourages open sharing (data owner/depositor permission not required for reuse)
 
 ## Databrary
 
-- Free (but not for long)
+- Free (but moving to subscription model)
 - Share unaltered video + other data
 - Open, unrestricted research uses (broad consent)
 - All data & metadata accessible via API
@@ -362,10 +355,10 @@ databraryr::download_session_csv() |>
   readr::read_csv(show_col_types = FALSE)
 ```
 
-## Play & Learning Across a Year (PLAY) Project
+## Play & Learning Across a Year (PLAY)
 
 - What does behavior look like in natural home environments?
-- [Parent site](https://www.anhourinthelife.org)
+- [Recruiting site](https://www.anhourinthelife.org) for parents
 - [Public researcher site](https://play-project.org)
 - Openly shared protocol
 
@@ -374,7 +367,22 @@ databraryr::download_session_csv() |>
 ## Lessons learned
 
 - Openness -> detailed [quality assurance](https://www.play-project.org/quality)
+
+---
+
+![[Figure 3 from @Soska2021-mh]](include/img/soska-etal-2021-fig03.jpg){.lightbox}
+
+## Lessons learned
+
 - Openness -> (Hyper)-active data curation [@Soska2021-mh]
+
+---
+
+![[Figure 1 from @Soska2021-mh]](include/img/soska-etal-2021-fig01.jpg){.lightbox}
+
+
+## Lessons learned
+
 - Openness -> [continuous integration](https://play-behaviorome.github.io/KoBoToolbox/)
 
 ---
